@@ -1,0 +1,59 @@
+{
+  "name": "mini-meili",
+  "type": "module",
+  "version": "0.0.0",
+  "author": "BeeeQueue <adam@haglund.dev>",
+  "license": "MIT",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": "^22"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "./node_modules/.bin/nano-staged"
+  },
+  "nano-staged": {
+    "*.{js,jsx,ts,tsx,json,json5,yaml,yml,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "lint": "eslint src",
+    "test": "tsx --test src/**/*.test.ts",
+    "typecheck": "svelte-check",
+    "prepare": "simple-git-hooks"
+  },
+  "dependencies": {
+    "meilisearch": "0.46.0",
+    "svelte": "5.11.2"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "3.11.2",
+    "@sveltejs/vite-plugin-svelte": "5.0.0-next.0",
+    "@tsconfig/strictest": "2.0.5",
+    "@tsconfig/svelte": "5.0.4",
+    "@unocss/preset-uno": "0.65.1",
+    "@unocss/reset": "0.65.1",
+    "@unocss/vite": "0.65.1",
+    "eslint": "9.16.0",
+    "eslint-plugin-svelte": "2.46.1",
+    "nano-staged": "0.8.0",
+    "prettier": "3.4.2",
+    "prettier-plugin-svelte": "3.3.2",
+    "prettier-plugin-tailwindcss": "0.6.9",
+    "simple-git-hooks": "2.11.1",
+    "svelte-check": "4.1.1",
+    "typescript": "5.7.2",
+    "vite": "6.0.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "indent-string": "npm:@socketregistry/indent-string@^1",
+      "is-core-module": "npm:@socketregistry/is-core-module@^1",
+      "object-assign": "npm:@socketregistry/object-assign@^1",
+      "path-parse": "npm:@socketregistry/path-parse@^1"
+    }
+  }
+}
