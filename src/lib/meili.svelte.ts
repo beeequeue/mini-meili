@@ -18,6 +18,7 @@ class MeiliConfig {
     new MeiliSearch({
       host: this.host,
       apiKey: this.apiKey ?? undefined,
+      clientAgents: [`mini-meili ${import.meta.env.SHA ?? "v?"}`],
     }),
   )
 }
