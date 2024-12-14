@@ -33,12 +33,12 @@
     "meilisearch": "0.46.0",
     "mutative": "1.1.0",
     "p-debounce": "4.0.0",
-    "svelte": "5.11.2"
+    "svelte": "5.13.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "3.11.2",
+    "@antfu/eslint-config": "3.12.0",
     "@melt-ui/pp": "0.3.2",
-    "@sveltejs/vite-plugin-svelte": "5.0.0-next.0",
+    "@sveltejs/vite-plugin-svelte": "5.0.2",
     "@tsconfig/strictest": "2.0.5",
     "@tsconfig/svelte": "5.0.4",
     "@unocss/preset-icons": "0.65.1",
@@ -47,7 +47,7 @@
     "@unocss/reset": "0.65.1",
     "@unocss/transformer-directives": "0.65.1",
     "@unocss/vite": "0.65.1",
-    "eslint": "9.16.0",
+    "eslint": "9.17.0",
     "eslint-plugin-svelte": "2.46.1",
     "nano-staged": "0.8.0",
     "prettier": "3.4.2",
