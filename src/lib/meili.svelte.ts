@@ -15,7 +15,6 @@ class MeiliConfig {
   )
 
   client = $derived.by(() => {
-    console.log({ host: this.host, apiKey: this.apiKey })
     localStorage.setItem("meili_host", this.host)
     if (this.apiKey != null) {
       localStorage.setItem("meili_api_key", this.apiKey)

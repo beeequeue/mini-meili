@@ -1,6 +1,7 @@
 <script lang="ts">
   import { createDialog, melt } from "@melt-ui/svelte"
   import { MeiliSearch } from "meilisearch"
+  import pDebounce from "p-debounce"
   import { fade } from "svelte/transition"
   import { meili } from "./lib/meili.svelte"
   import TextInput from "./text-input.svelte"
@@ -19,9 +20,9 @@
     elements: { trigger, portalled, overlay, content, title, close },
     states: { open },
   } = createDialog({
-    defaultOpen: meili.apiKey != null,
-    role: meili.apiKey != null ? "dialog" : "alertdialog",
-    escapeBehavior: meili.apiKey != null ? "close" : "ignore",
+    defaultOpen: meili.apiKey == null,
+    role: meili.apiKey == null ? "alertdialog" : "dialog",
+    escapeBehavior: meili.apiKey == null ? "ignore" : "close",
     closeOnOutsideClick: meili.apiKey != null,
   })
 
@@ -29,9 +30,8 @@
   let apiKeyValue = $state(meili.apiKey ?? "")
   let hostValue = $state(meili.host)
 
-  const testConfig = async () => {
+  const testConfig = pDebounce(async () => {
     try {
-      testing = true
       const client = new MeiliSearch({
         host: hostValue,
         apiKey: apiKeyValue.length > 0 ? apiKeyValue : undefined,
@@ -41,20 +41,24 @@
       return true
     } catch {
       return false
-    } finally {
-      testing = false
     }
-  }
+  }, 350)
 
   $effect(() => {
     if (hostValue.length < 3 || !isUrl(hostValue)) return
 
+    const previousApiKey = apiKeyValue
+    testing = true
     testConfig().then((result) => {
+      testing = false
       if (!result) return
 
       meili.host = hostValue
       meili.apiKey = apiKeyValue
-      open.set(false)
+
+      if (previousApiKey == null) {
+        open.set(false)
+      }
     })
   })
 </script>
