@@ -6,6 +6,10 @@
   import { meili } from "./lib/meili.svelte"
   import TextInput from "./text-input.svelte"
 
+  $effect(() => {
+    window.history.pushState({}, "", window.location.pathname)
+  })
+
   let inputValue = $state("")
   $effect(() => {
     if (inputValue.length < 2 || selectedIndex == null) return
