@@ -1,5 +1,5 @@
-import presetUno from "@unocss/preset-uno"
 import presetIcons from "@unocss/preset-icons"
+import presetUno from "@unocss/preset-uno"
 import presetWebFonts from "@unocss/preset-web-fonts"
 import transformerDirectives from "@unocss/transformer-directives"
 import { defineConfig } from "@unocss/vite"
@@ -11,7 +11,7 @@ export default defineConfig({
     presetWebFonts({
       fonts: {
         sans: { name: "Nunito", provider: "fontsource" },
-        text: { name: "Crimson Pro", provider: "fontsource" },
+        serif: { name: "Crimson Pro", provider: "fontsource" },
       },
     }),
   ],

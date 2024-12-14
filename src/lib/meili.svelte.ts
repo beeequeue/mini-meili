@@ -1,18 +1,31 @@
 import { MeiliSearch } from "meilisearch"
 
-export const meiliApiKey = $state<string>()
-export const meiliHost = $state<string>(
-  import.meta.env.PROD
-    ? `${window.location.protocol}//${window.location.hostname}:7700`
-    : "http://localhost:7700",
-)
+class MeiliConfig {
+  apiKey = $state<string | null>(
+    new URLSearchParams(window.location.search).get("api_key") ??
+      localStorage.getItem("meili_api_key"),
+  )
 
-export const meili = new MeiliSearch({
-  host: meiliHost,
-  apiKey: meiliApiKey,
-})
+  host = $state<string>(
+    new URLSearchParams(window.location.search).get("host") ??
+      localStorage.getItem("meili_host") ??
+      (import.meta.env.PROD
+        ? `${window.location.protocol}//${window.location.hostname}:7700`
+        : "http://localhost:7700"),
+  )
 
-$effect.root(() => {
-  meili.config.host = meiliHost
-  meili.config.apiKey = meiliApiKey
-})
+  client = $derived.by(() => {
+    console.log({ host: this.host, apiKey: this.apiKey })
+    localStorage.setItem("meili_host", this.host)
+    if (this.apiKey != null) {
+      localStorage.setItem("meili_api_key", this.apiKey)
+    }
+
+    return new MeiliSearch({
+      host: this.host,
+      apiKey: this.apiKey ?? undefined,
+    })
+  })
+}
+
+export const meili = new MeiliConfig()

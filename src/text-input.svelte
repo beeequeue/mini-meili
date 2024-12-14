@@ -1,6 +1,9 @@
 <script lang="ts">
   type GoodInputProps = Partial<
-    Pick<HTMLInputElement, "value" | "id" | "minLength" | "maxLength" | "autofocus">
+    Pick<
+      HTMLInputElement,
+      "value" | "id" | "minLength" | "maxLength" | "autofocus" | "placeholder"
+    >
   >
 
   type Props = {
@@ -13,7 +16,12 @@
 
 <input
   id="search"
-  class="b-solid b-b-2 b-amber bg-#151515 px-3 py-2"
+  class:b-solid={true}
+  class:b-b-2={true}
+  class:b-red-4={true}
+  class:bg-#151515={true}
+  class:px-3={true}
+  class:py-2={true}
   {...props}
   bind:value
 />

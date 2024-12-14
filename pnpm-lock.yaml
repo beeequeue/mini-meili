@@ -14,6 +14,12 @@ importers:
 
   .:
     dependencies:
+      '@iconify-json/lucide':
+        specifier: 1.2.18
+        version: 1.2.18
+      '@iconify-json/simple-icons':
+        specifier: 1.2.15
+        version: 1.2.15
       '@melt-ui/svelte':
         specifier: 0.86.2
         version: 0.86.2(svelte@5.11.2)
@@ -33,9 +39,6 @@ importers:
       '@antfu/eslint-config':
         specifier: 3.11.2
         version: 3.11.2(@typescript-eslint/utils@8.16.0(eslint@9.16.0(jiti@1.21.6))(typescript@5.7.2))(@vue/compiler-sfc@3.5.13)(eslint-plugin-svelte@2.46.1(eslint@9.16.0(jiti@1.21.6))(svelte@5.11.2))(eslint@9.16.0(jiti@1.21.6))(svelte-eslint-parser@0.43.0(svelte@5.11.2))(typescript@5.7.2)(vitest@2.1.6(@types/node@22.10.2)(jiti@1.21.6)(tsx@4.19.2)(yaml@2.6.1))
-      '@iconify-json/simple-icons':
-        specifier: 1.2.15
-        version: 1.2.15
       '@melt-ui/pp':
         specifier: 0.3.2
         version: 0.3.2(@melt-ui/svelte@0.86.2(svelte@5.11.2))(svelte@5.11.2)
@@ -562,6 +565,9 @@ packages:
   '@humanwhocodes/retry@0.4.1':
     resolution: {integrity: sha512-c7hNEllBlenFTHBky65mhq8WD2kbN9Q6gk0bTk8lSBvc554jpXSkST1iePudpt7+A/AQvuHs9EMqjHDXMY1lrA==}
     engines: {node: '>=18.18'}
+
+  '@iconify-json/lucide@1.2.18':
+    resolution: {integrity: sha512-SFBoHBSULntem84iWxGM9NzlP6QY/dwjxC5t4c1lC7+xq31Fous8JkppoJih0/ICJ3CsbppRZeb11y3iLcwwug==}
 
   '@iconify-json/simple-icons@1.2.15':
     resolution: {integrity: sha512-4vxMQwkjsbjVIVGsPjKBnLMqAXu4wSlHmeN35KaJLK0UJNUj/ef6ES5c4bT/U4bSZjD2oZqOjOWTPD+HCrSUkg==}
@@ -2881,6 +2887,10 @@ snapshots:
   '@humanwhocodes/retry@0.3.1': {}
 
   '@humanwhocodes/retry@0.4.1': {}
+
+  '@iconify-json/lucide@1.2.18':
+    dependencies:
+      '@iconify/types': 2.0.0
 
   '@iconify-json/simple-icons@1.2.15':
     dependencies:

@@ -4,8 +4,10 @@
     // Output
     "noEmit": true,
     "sourceMap": true,
+    "useDefineForClassFields": true,
 
     // Modules
+    "isolatedModules": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "baseUrl": "./src",
