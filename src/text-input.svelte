@@ -8,20 +8,27 @@
 
   type Props = {
     type?: "text" | "password" | "email"
-    class?: string
+    className?: string
   }
 
-  let { value = $bindable<string>(""), ...props } = $props<Props & GoodInputProps>()
+  let {
+    value = $bindable<string>(""),
+    className,
+    ...props
+  }: Props & GoodInputProps = $props()
 </script>
 
-<input
-  id="search"
-  class:b-solid={true}
+<div
+  class:flex={true}
+  class:items-center={true}
+  class:b-b-solid={true}
   class:b-b-2={true}
   class:b-red-4={true}
   class:bg-#151515={true}
-  class:px-3={true}
-  class:py-2={true}
-  {...props}
-  bind:value
-/>
+  class:px-2={true}
+  class={className}
+>
+  <div class="i-lucide:search mr-1 p-3"></div>
+
+  <input id="search" {...props} class="py-2" bind:value />
+</div>
