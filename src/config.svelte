@@ -100,13 +100,13 @@
       <label class="flex flex-col">
         MeiliSearch API Key:
 
-        <TextInput id="apiKey" class="mt-1" bind:value={apiKeyValue} />
+        <TextInput id="apiKey" className="mt-1" bind:value={apiKeyValue} />
       </label>
 
       <label class="mt-2 flex flex-col">
         MeiliSearch host:
 
-        <TextInput id="host" class="mt-1" bind:value={hostValue} />
+        <TextInput id="host" className="mt-1" bind:value={hostValue} />
       </label>
     </div>
   </div>
