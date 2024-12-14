@@ -10,8 +10,8 @@ export default defineConfig({
     presetIcons(),
     presetWebFonts({
       fonts: {
-        sans: { name: "Synonym", provider: "fontshare" },
-        serif: { name: "Chubbo", provider: "fontshare" },
+        sans: { name: "Nunito", provider: "fontsource" },
+        text: { name: "Crimson Pro", provider: "fontsource" },
       },
     }),
   ],

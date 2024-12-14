@@ -1,6 +1,6 @@
-import { defineConfig } from "vite"
 import { svelte } from "@sveltejs/vite-plugin-svelte"
 import unocss from "@unocss/vite"
+import { defineConfig } from "vite"
 
 export default defineConfig({
   build: {
@@ -9,8 +9,14 @@ export default defineConfig({
       output: {
         manualChunks: (id) => {
           if (id.includes("node_modules")) {
-            if (id.includes("/svelte/")) {
+            if (id.includes(".pnpm/svelte")) {
               return "svelte"
+            }
+            if (id.includes(".pnpm/meilisearch")) {
+              return "meilisearch"
+            }
+            if (id.includes(".pnpm/@melt")) {
+              return "melt"
             }
           }
         },
