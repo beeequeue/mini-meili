@@ -106,7 +106,7 @@
 <a
   target="_blank"
   rel="noopener"
-  href="https://github.com/beeequeue/remsg-editor"
+  href="https://github.com/beeequeue/mini-meili"
   class="mt-auto flex shrink-0 items-center justify-center p-1"
 >
   <div class="i-simple-icons:github mr-1"></div>
