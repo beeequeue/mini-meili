@@ -14,17 +14,12 @@ class MeiliConfig {
         : "http://localhost:7700"),
   )
 
-  client = $derived.by(() => {
-    localStorage.setItem("meili_host", this.host)
-    if (this.apiKey != null) {
-      localStorage.setItem("meili_api_key", this.apiKey)
-    }
-
-    return new MeiliSearch({
+  client = $derived(
+    new MeiliSearch({
       host: this.host,
       apiKey: this.apiKey ?? undefined,
-    })
-  })
+    }),
+  )
 }
 
 export const meili = new MeiliConfig()

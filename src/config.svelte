@@ -55,6 +55,10 @@
 
       meili.host = hostValue
       meili.apiKey = apiKeyValue
+      localStorage.setItem("meili_host", meili.host)
+      if (meili.apiKey != null) {
+        localStorage.setItem("meili_api_key", meili.apiKey)
+      }
 
       if (previousApiKey == null) {
         open.set(false)
