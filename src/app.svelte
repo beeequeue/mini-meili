@@ -38,7 +38,7 @@
 <Config />
 
 <main
-  class="md:min-w-650px w-100% md:w-65% pt-40% transition-duration-750ms transition-property-padding mx-auto flex h-full flex-col items-center transition"
+  class="md:min-w-650px w-100% md:w-65% pt-40% transition-duration-750ms transition-property-padding relative mx-auto flex h-full min-h-0 flex-col items-center transition"
   class:pt-50px={(response?.hits.length ?? 0) > 0}
 >
   <TextInput
@@ -56,7 +56,7 @@
       </span>
     </div>
 
-    <div class="pb-50px mt-4 flex w-full flex-col items-center overflow-y-auto">
+    <div class="pb-50px rd-lg mt-4 flex w-full flex-col items-center overflow-y-auto">
       {#each response.hits as hit}
         <table class="not-first:mt-4 bg-#151515 rd-lg w-full">
           <tbody>
@@ -84,17 +84,15 @@
   {/if}
 </main>
 
-<div class="mt-auto flex w-full flex-col items-center justify-center">
-  <a
-    target="_blank"
-    rel="noopener"
-    href="https://github.com/beeequeue/remsg-editor"
-    class=" fixed bottom-2 flex items-center"
-  >
-    <div class="i-simple-icons:github mr-1"></div>
-    Made by beequeue
-  </a>
-</div>
+<a
+  target="_blank"
+  rel="noopener"
+  href="https://github.com/beeequeue/remsg-editor"
+  class="mt-auto flex shrink-0 items-center justify-center p-1"
+>
+  <div class="i-simple-icons:github mr-1"></div>
+  made by beequeue
+</a>
 
 <style>
   :global(html) {
