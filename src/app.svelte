@@ -53,7 +53,7 @@
 <Config />
 
 <main
-  class="md:min-w-650px w-100% md:w-65% pt-45% transition-duration-750ms transition-property-padding relative mx-auto flex h-full min-h-0 flex-col items-center transition"
+  class="md:min-w-650px w-100% md:w-65% pt-45vh transition-duration-750ms transition-property-padding relative mx-auto flex h-full min-h-0 flex-col items-center transition"
   class:pt-50px={(result?.hits.length ?? 0) > 0}
 >
   <div class="flex gap-2">
