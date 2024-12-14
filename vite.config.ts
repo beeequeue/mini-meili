@@ -1,6 +1,7 @@
 import { svelte } from "@sveltejs/vite-plugin-svelte"
 import unocss from "@unocss/vite"
 import { defineConfig } from "vite"
+import { VitePWA } from "vite-plugin-pwa"
 
 export default defineConfig({
   build: {
@@ -24,5 +25,25 @@ export default defineConfig({
     },
   },
 
-  plugins: [svelte(), unocss()],
+  plugins: [
+    svelte(),
+    unocss(),
+    VitePWA({
+      registerType: "prompt",
+      injectRegister: "script-defer",
+      manifest: {
+        name: "mini-meili, a tiny MeiliSearch web client",
+        theme_color: "#15151",
+        display: "minimal-ui",
+        orientation: "portrait",
+        icons: [
+          {
+            src: "/icon.svg",
+            sizes: "256x256",
+            type: "image/svg",
+          },
+        ],
+      },
+    }),
+  ],
 })
