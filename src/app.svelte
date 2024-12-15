@@ -107,15 +107,19 @@
   {/if}
 </main>
 
-<a
-  target="_blank"
-  rel="noopener"
-  href="https://github.com/beeequeue/mini-meili"
-  class="mt-auto flex shrink-0 items-center justify-center p-1"
->
-  <div class="i-simple-icons:github mr-1"></div>
-  made by beequeue
-</a>
+<div class="text-gray-4 mt-auto flex shrink-0 items-center justify-center gap-2 p-1">
+  <a
+    target="_blank"
+    rel="noopener"
+    href="https://github.com/beeequeue/mini-meili"
+    class="flex items-center"
+  >
+    <div class="i-simple-icons:github mr-1"></div>
+    made by beequeue
+  </a>
+  <span>•</span>
+  <span class="text-3.5">{import.meta.env.GIT_SHA.slice(0, 7)}</span>
+</div>
 
 <style>
   :global(html) {
