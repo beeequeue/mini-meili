@@ -18,12 +18,12 @@
       automerge: true,
     },
     {
-      packagePatterns: ["lint", "!lint-staged"],
       groupName: "Linting",
+      matchPackageNames: ["/lint/", "/!lint-staged/"],
     },
     {
-      packagePatterns: ["@nolyfill/*", "@socketregistry/*"],
       rangeStrategy: "replace",
+      matchPackageNames: ["/@nolyfill/*/", "/@socketregistry/*/"],
     },
   ],
 }
