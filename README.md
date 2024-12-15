@@ -14,6 +14,19 @@ An alternative to the official, unmaintained [Mini Dashboard](https://github.com
   - 235kb vs. 933kb vs. 5mb
   - Built with Svelte 5
 
+### URL Parameters
+
+You can pre-configure the client by passing URL parameters.
+
+- `host`: The URL of the MeiliSearch instance to connect to
+- `api_key`: The API key to use
+
+Example:
+
+```url
+https://mini-meili.haglund.dev/?host=https://search.haglund.dev&api_key=22b483672526a6eb07f464cf3bdae5924ff25d031b7d69968eb5babccbbd9c79
+```
+
 ## Self-hosting
 
 ### Docker
