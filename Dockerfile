@@ -18,6 +18,8 @@ COPY public/ ./public/
 COPY src/ ./src/
 COPY index.html svelte.config.js tsconfig.json unocss.config.ts vite.config.ts ./
 
+ARG GIT_SHA
+ENV GIT_SHA=$GIT_SHA
 ENV NODE_ENV=production
 RUN pnpm build
 

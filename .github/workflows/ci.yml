@@ -136,6 +136,8 @@ jobs:
       - name: Build and maybe Push Docker image
         uses: docker/build-push-action@v6
         with:
+          build-args: |
+            GIT_SHA=${{ github.sha }}
           push: ${{ github.ref == 'refs/heads/main' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
