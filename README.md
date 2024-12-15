@@ -14,6 +14,15 @@ An alternative to the official, unmaintained [Mini Dashboard](https://github.com
   - 235kb vs. 933kb vs. 5mb
   - Built with Svelte 5
 
+## Configuration
+
+The API key needs to have the same access as the official dashboard requires.
+
+- `search`
+- `indexes.get`
+- `stats.get`
+- `version`
+
 ### URL Parameters
 
 You can pre-configure the client by passing URL parameters.
