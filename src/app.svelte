@@ -88,7 +88,9 @@
                 <td class="text-3 text-gray-4 w-fit py-1.5 pl-4 text-end">
                   {key}
                 </td>
-                <td class="text-4.5 w-full px-4 py-1.5 font-serif">{hit[key]}</td>
+                <td class="text-4.5 w-full select-text px-4 py-1.5 font-serif">
+                  {hit[key]}
+                </td>
               </tr>
             {/each}
           </tbody>
