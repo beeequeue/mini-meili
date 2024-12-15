@@ -89,7 +89,19 @@
                   {key}
                 </td>
                 <td class="text-4.5 w-full select-text px-4 py-1.5 font-serif">
-                  {hit[key]}
+                  {#if hit[key].includes("\n")}
+                    {#each hit[key].split("\n") as line}
+                      {line}
+                      <br />
+                    {/each}
+                  {:else if hit[key].includes("\r\n")}
+                    {#each hit[key].split("\r\n") as line}
+                      {line}
+                      <br />
+                    {/each}
+                  {:else}
+                    {hit[key]}
+                  {/if}
                 </td>
               </tr>
             {/each}
