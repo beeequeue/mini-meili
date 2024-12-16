@@ -11,7 +11,7 @@ An alternative to the official, unmaintained [Mini Dashboard](https://github.com
   - Easy to self-host if need be
   - Configure via URL parameters
 - More smaller
-  - 235kb vs. 933kb vs. 5mb
+  - 193kb vs. 752kb vs. 1.5mb
   - Built with Svelte 5
 
 ## Configuration
