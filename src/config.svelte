@@ -67,7 +67,10 @@
   })
 </script>
 
-<button use:melt={$trigger} class="fixed left-0 top-0 flex items-center gap-1 px-4 py-3">
+<button
+  use:melt={$trigger}
+  class="fixed left-0 top-0 flex cursor-pointer items-center gap-1 px-4 py-3"
+>
   <span class="i-lucide:settings"></span>
   Config
 </button>
@@ -78,7 +81,7 @@
 
     <div
       use:melt={$content}
-      class="z-101 left-50% top-50% -translate-x-50% -translate-y-50% bg-#111 rd-xl fixed p-5 shadow-lg shadow-black"
+      class="z-101 w-90% max-w-400px left-50% top-50% -translate-x-50% -translate-y-50% bg-#111 rd-xl fixed p-5 shadow-lg shadow-black"
     >
       <div class="flex items-center gap-2">
         <h2 use:melt={$title} class="m-0">Config</h2>
