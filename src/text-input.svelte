@@ -7,13 +7,15 @@
   >
 
   type Props = {
+    icon?: "search" | "key" | "url"
     type?: "text" | "password" | "email"
     className?: string
   }
 
   let {
-    value = $bindable<string>(""),
+    icon,
     className,
+    value = $bindable<string>(""),
     ...props
   }: Props & GoodInputProps = $props()
 </script>
@@ -25,10 +27,17 @@
   class:b-b-2={true}
   class:b-red-4={true}
   class:bg-#151515={true}
-  class:px-2={true}
+  class:p-2={true}
   class={className}
 >
-  <div class="i-lucide:search mr-1 p-3"></div>
+  {#if icon != null}
+    <div
+      class="ml-0.5 mr-2 p-2.5"
+      class:i-lucide:search={icon === "search"}
+      class:i-lucide:key-round={icon === "key"}
+      class:i-lucide:globe={icon === "url"}
+    ></div>
+  {/if}
 
-  <input id="search" {...props} class="py-2" bind:value />
+  <input id="search" {...props} class="w-full p-0" bind:value />
 </div>

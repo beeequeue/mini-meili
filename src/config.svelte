@@ -68,7 +68,7 @@
 </script>
 
 <button use:melt={$trigger} class="fixed left-0 top-0 flex items-center gap-1 px-4 py-3">
-  <span class="i-lucide:cog"></span>
+  <span class="i-lucide:settings"></span>
   Config
 </button>
 
@@ -100,13 +100,13 @@
       <label class="flex flex-col">
         MeiliSearch API Key:
 
-        <TextInput id="apiKey" className="mt-1" bind:value={apiKeyValue} />
+        <TextInput id="apiKey" icon="key" className="mt-1" bind:value={apiKeyValue} />
       </label>
 
       <label class="mt-2 flex flex-col">
         MeiliSearch host:
 
-        <TextInput id="host" className="mt-1" bind:value={hostValue} />
+        <TextInput id="host" icon="url" className="mt-1" bind:value={hostValue} />
       </label>
     </div>
   </div>

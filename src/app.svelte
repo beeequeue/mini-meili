@@ -65,6 +65,7 @@
 
     <TextInput
       id="search"
+      icon="search"
       className="w-300px"
       placeholder="Search for something..."
       bind:value={inputValue}
