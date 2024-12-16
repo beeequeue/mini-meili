@@ -47,7 +47,7 @@
   $effect(() => {
     if (hostValue.length < 3 || !isUrl(hostValue)) return
 
-    const previousApiKey = apiKeyValue
+    const previousApiKey = meili.apiKey
     testing = true
     testConfig().then((result) => {
       testing = false
