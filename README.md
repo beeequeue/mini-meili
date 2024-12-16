@@ -16,7 +16,11 @@ An alternative to the official, unmaintained [Mini Dashboard](https://github.com
 
 ## Configuration
 
-The API key needs to have the same access as the official dashboard requires.
+**DO NOT USE AN API KEY THAT HAS WRITE PERMISSIONS!** 
+
+The client can't use any write permissions, so using a key with more permissions than needed is just insecure with no benefits.
+
+The client requires the API key to have these permissions:
 
 - `search`
 - `indexes.get`
