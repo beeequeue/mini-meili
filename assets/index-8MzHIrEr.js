@@ -3,4 +3,4 @@ import{s as R,p as C,b as e,c as P,e as ge,f as $e,i as H,h as _,j as Ne,k as d,
 `),le,(Le,Pe)=>{var we=tt(),Te=B(we);_(()=>F(Te,`${e(Pe)??""} `)),d(Le,we)}),d(g,M)},l=g=>{var M=Ae();_(()=>F(M,e($)[e(O)])),d(g,M)};H(re,g=>{e($)[e(O)].includes(`\r
 `)?g(se):g(l,!1)},!0)}d(z,ie)};H(de,z=>{e($)[e(O)].includes(`
 `)?z(ve):z(pe,!1)})}_(()=>F(oe,e(O))),d(te,ae)}),d(w,q)});var Q=c(W,2);{var u=w=>{var $=rt();$.__click=[Ze,s,t,i],d(w,$)};H(Q,w=>{(e(s).totalPages??0)>(e(s).page??0)&&w(u)})}_(()=>F(N,`${e(s).estimatedTotalHits??e(s).totalHits??e(s).hits.length??""} hits in
-        ${e(s).processingTimeMs??""}ms`)),d(f,y)};H(Y,f=>{e(s)!=null&&f(T)})}var k=c(o,2),j=c(v(k),4),G=v(j);_(()=>F(G,"36af7283e7aece7804e3ff8cb5d13ba913d6d603".slice(0,7))),_(()=>I(o,"pt-50px",(e(s)?.hits.length??0)>0)),d(m,p),xe()}Me(["click"]);Ve(lt,{target:document.getElementById("root")});
+        ${e(s).processingTimeMs??""}ms`)),d(f,y)};H(Y,f=>{e(s)!=null&&f(T)})}var k=c(o,2),j=c(v(k),4),G=v(j);_(()=>F(G,"b9f7920b716f23a179cba4409eb89abf4cacff1a".slice(0,7))),_(()=>I(o,"pt-50px",(e(s)?.hits.length??0)>0)),d(m,p),xe()}Me(["click"]);Ve(lt,{target:document.getElementById("root")});
