@@ -36,7 +36,7 @@
     "svelte": "5.25.5"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "4.3.0",
+    "@antfu/eslint-config": "4.11.0",
     "@melt-ui/pp": "0.3.2",
     "@sveltejs/vite-plugin-svelte": "5.0.3",
     "@tsconfig/strictest": "2.0.5",
@@ -47,8 +47,8 @@
     "@unocss/reset": "65.5.0",
     "@unocss/transformer-directives": "65.5.0",
     "@unocss/vite": "65.5.0",
-    "eslint": "9.21.0",
-    "eslint-plugin-svelte": "3.0.2",
+    "eslint": "9.23.0",
+    "eslint-plugin-svelte": "3.4.1",
     "nano-staged": "0.8.0",
     "prettier": "3.5.3",
     "prettier-plugin-svelte": "3.3.3",
