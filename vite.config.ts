@@ -33,18 +33,21 @@ export default defineConfig({
     target: "firefox125",
     rollupOptions: {
       output: {
-        manualChunks: (id) => {
-          if (id.includes("node_modules")) {
-            if (id.includes(".pnpm/svelte")) {
-              return "svelte"
-            }
-            if (id.includes(".pnpm/meilisearch")) {
-              return "meilisearch"
-            }
-            if (id.includes(".pnpm/@melt")) {
-              return "melt"
-            }
-          }
+        advancedChunks: {
+          groups: [
+            {
+              name: "svelte",
+              test: /\.pnpm.svelte/,
+            },
+            {
+              name: "meilisearch",
+              test: /\.pnpm.meilisearch/,
+            },
+            {
+              name: "melt",
+              test: /\.pnpm.@melt/,
+            },
+          ],
         },
       },
     },
