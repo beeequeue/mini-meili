@@ -1,12 +1,10 @@
-FROM node:22-alpine as build
+FROM node:24-alpine as build
 
 RUN corepack enable
 
 WORKDIR /app
 
-COPY package.json .
-COPY pnpm-lock.yaml .
-COPY .npmrc .
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 
 ENV PNPM_HOME=/pnpm
 ENV CI=1
