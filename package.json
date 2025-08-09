@@ -26,19 +26,19 @@
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
-    "@iconify-json/lucide": "1.2.39",
-    "@iconify-json/simple-icons": "1.2.33",
+    "@iconify-json/lucide": "1.2.61",
+    "@iconify-json/simple-icons": "1.2.46",
     "@melt-ui/svelte": "0.86.6",
     "es-toolkit": "1.36.0",
     "meilisearch": "0.50.0",
     "mutative": "1.1.0",
     "p-debounce": "4.0.0",
-    "svelte": "5.28.2"
+    "svelte": "5.38.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "5.2.0",
     "@melt-ui/pp": "0.3.2",
-    "@sveltejs/vite-plugin-svelte": "5.0.3",
+    "@sveltejs/vite-plugin-svelte": "6.1.1",
     "@tsconfig/strictest": "2.0.5",
     "@tsconfig/svelte": "5.0.4",
     "@unocss/preset-icons": "66.0.0",
@@ -54,9 +54,9 @@
     "prettier-plugin-svelte": "3.4.0",
     "prettier-plugin-tailwindcss": "0.6.14",
     "simple-git-hooks": "2.13.1",
-    "svelte-check": "4.1.6",
+    "svelte-check": "4.3.1",
     "typescript": "5.8.3",
-    "vite": "npm:rolldown-vite@6.3.5",
-    "vite-plugin-pwa": "1.0.0"
+    "vite": "npm:rolldown-vite@7.1.0",
+    "vite-plugin-pwa": "1.0.2"
   }
 }
