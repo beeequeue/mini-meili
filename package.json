@@ -58,15 +58,5 @@
     "typescript": "5.8.3",
     "vite": "npm:rolldown-vite@6.3.5",
     "vite-plugin-pwa": "1.0.0"
-  },
-  "pnpm": {
-    "overrides": {
-      "indent-string": "npm:@socketregistry/indent-string@^1",
-      "is-core-module": "npm:@socketregistry/is-core-module@^1",
-      "object-assign": "npm:@socketregistry/object-assign@^1",
-      "path-parse": "npm:@socketregistry/path-parse@^1",
-      "safe-buffer": "npm:@nolyfill/safe-buffer@^1",
-      "string.prototype.matchall": "npm:@nolyfill/string.prototype.matchall@^1"
-    }
   }
 }
