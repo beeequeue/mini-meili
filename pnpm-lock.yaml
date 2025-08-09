@@ -66,10 +66,10 @@ importers:
       '@unocss/preset-icons':
         specifier: 66.4.2
         version: 66.4.2
-      '@unocss/preset-uno':
+      '@unocss/preset-web-fonts':
         specifier: 66.4.2
         version: 66.4.2
-      '@unocss/preset-web-fonts':
+      '@unocss/preset-wind3':
         specifier: 66.4.2
         version: 66.4.2
       '@unocss/reset':
@@ -1519,9 +1519,6 @@ packages:
 
   '@unocss/preset-mini@66.4.2':
     resolution: {integrity: sha512-Ry+5hM+XLmT8HrEb182mUfcZuyrZ8xR+TBe72DBcliJ1DhOV3K67TCxwQucfb0zHbGV71HNWdPmHsLKxPDgweQ==}
-
-  '@unocss/preset-uno@66.4.2':
-    resolution: {integrity: sha512-1MFtPivGcpqRQFWdjtP40Enop1y3XDb3tlZXoMQUX0IGLG8HJOT+lfQx/Xl9t73ShJ8aAJ/l6qTxC43ZGNACzA==}
 
   '@unocss/preset-web-fonts@66.4.2':
     resolution: {integrity: sha512-4FYmleeRoM8r2DqGl6dfIjnX57tepcfZCvVfeCqYnk7475Yddmv1OYkoMjkWMnkK9MzdSxsFwHMU6CIUTmFTzQ==}
@@ -4707,11 +4704,6 @@ snapshots:
       '@unocss/core': 66.4.2
       '@unocss/extractor-arbitrary-variants': 66.4.2
       '@unocss/rule-utils': 66.4.2
-
-  '@unocss/preset-uno@66.4.2':
-    dependencies:
-      '@unocss/core': 66.4.2
-      '@unocss/preset-wind3': 66.4.2
 
   '@unocss/preset-web-fonts@66.4.2':
     dependencies:

@@ -34,6 +34,8 @@
   fetchIndexes()
 
   let result = $state.raw<SearchResponse | null>(null)
+  const hasHits = $derived((result?.hits.length ?? 0) !== 0)
+
   const search = debounce(async (input: string) => {
     const response = await meili.client.index(selectedIndex!).search(input, { page: 1 })
 
@@ -58,7 +60,7 @@
 
 <main
   class="md:min-w-650px w-100% md:w-65% pt-45vh transition-duration-750ms transition-property-padding relative mx-auto flex h-full min-h-0 flex-col items-center transition"
-  class:pt-50px={(result?.hits.length ?? 0) > 0}
+  class:pt-50px={hasHits}
 >
   <div class="flex gap-2">
     <IndexSelector {indexes} bind:selected={selectedIndex} />
@@ -90,12 +92,12 @@
                   {key}
                 </td>
                 <td class="text-4.5 w-full select-text px-4 py-1.5 font-serif">
-                  {#if hit[key].includes("\n")}
+                  {#if hit[key]?.includes("\n")}
                     {#each hit[key].split("\n") as line}
                       {line}
                       <br />
                     {/each}
-                  {:else if hit[key].includes("\r\n")}
+                  {:else if hit[key]?.includes("\r\n")}
                     {#each hit[key].split("\r\n") as line}
                       {line}
                       <br />
