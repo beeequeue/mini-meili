@@ -5,6 +5,7 @@
   import IndexSelector from "./index-selector.svelte"
   import { meili } from "./lib/meili.svelte"
   import TextInput from "./text-input.svelte"
+  import Value from "./value.svelte"
 
   $effect(() => {
     window.history.pushState({}, "", window.location.pathname)
@@ -93,21 +94,8 @@
                 <td class=":uno: text-3 text-gray-4 w-fit py-1.5 pl-4 text-end">
                   {key}
                 </td>
-                <td class=":uno: text-4.5 w-full select-text px-4 py-1.5 font-serif">
-                  {#if hit[key]?.includes("\n")}
-                    {#each hit[key].split("\n") as line}
-                      {line}
-                      <br />
-                    {/each}
-                  {:else if hit[key]?.includes("\r\n")}
-                    {#each hit[key].split("\r\n") as line}
-                      {line}
-                      <br />
-                    {/each}
-                  {:else}
-                    {hit[key]}
-                  {/if}
-                </td>
+
+                <Value value={hit[key]} />
               </tr>
             {/each}
           </tbody>

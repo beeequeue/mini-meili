@@ -16,7 +16,7 @@ export default defineConfig({
     }),
   ],
   safelist: ["pt-50px"],
-  transformers: [compileClass()],
+  transformers: [compileClass({ alwaysHash: true })],
   rules: [
     [/ratio-(\d+)/, ([, n]) => ({ "aspect-ratio": `1 / ${n}` })],
     [/opac-(.+)/, ([, value]) => ({ opacity: value })],
