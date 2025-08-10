@@ -82,16 +82,18 @@
       </span>
     </div>
 
-    <div class="pb-50px rd-lg mt-4 flex w-full flex-col items-center overflow-y-auto">
+    <div
+      class=":uno: pb-50px rd-lg mt-4 flex w-full flex-col items-center overflow-y-auto"
+    >
       {#each result.hits as hit}
-        <table class="not-first:mt-4 bg-#151515 rd-lg w-full">
+        <table class=":uno: not-first:mt-4 bg-#151515 rd-lg w-full">
           <tbody>
             {#each Object.keys(hit) as key}
-              <tr class="not-last:b-b-solid b-b-1 b-b-red-4">
-                <td class="text-3 text-gray-4 w-fit py-1.5 pl-4 text-end">
+              <tr class=":uno: not-last:b-b-solid b-b-1 b-b-red-4">
+                <td class=":uno: text-3 text-gray-4 w-fit py-1.5 pl-4 text-end">
                   {key}
                 </td>
-                <td class="text-4.5 w-full select-text px-4 py-1.5 font-serif">
+                <td class=":uno: text-4.5 w-full select-text px-4 py-1.5 font-serif">
                   {#if hit[key]?.includes("\n")}
                     {#each hit[key].split("\n") as line}
                       {line}

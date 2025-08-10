@@ -31,7 +31,7 @@ export default defineConfig({
 
   build: {
     target: "firefox126",
-    rollupOptions: {
+    rolldownOptions: {
       output: {
         advancedChunks: {
           groups: [

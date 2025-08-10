@@ -1,7 +1,7 @@
 import presetIcons from "@unocss/preset-icons"
-import presetUno from "@unocss/preset-wind3"
 import presetWebFonts from "@unocss/preset-web-fonts"
-import transformerDirectives from "@unocss/transformer-directives"
+import presetUno from "@unocss/preset-wind3"
+import compileClass from "@unocss/transformer-compile-class"
 import { defineConfig } from "@unocss/vite"
 
 export default defineConfig({
@@ -16,7 +16,7 @@ export default defineConfig({
     }),
   ],
   safelist: ["pt-50px"],
-  transformers: [transformerDirectives()],
+  transformers: [compileClass()],
   rules: [
     [/ratio-(\d+)/, ([, n]) => ({ "aspect-ratio": `1 / ${n}` })],
     [/opac-(.+)/, ([, value]) => ({ opacity: value })],
