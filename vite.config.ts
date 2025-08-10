@@ -25,6 +25,8 @@ const getGitSha = () => {
 }
 
 export default defineConfig({
+  experimental: { enableNativePlugin: true },
+
   define: {
     "import.meta.env.GIT_SHA": JSON.stringify(getGitSha()),
   },
