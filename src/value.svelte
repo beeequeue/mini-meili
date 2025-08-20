@@ -32,7 +32,9 @@
   {:else if typeof value === "boolean" || typeof value === "number"}
     {value.toString()}
   {:else if typeof value === "string"}
-    {#if isUrl && (isImageUrl || key.toLowerCase().includes("image"))}
+    {#if value.startsWith("data:image/") || (isUrl && (isImageUrl || key
+            .toLowerCase()
+            .includes("image")))}
       <a
         href={value}
         target="_blank"
@@ -40,7 +42,9 @@
         class="line-clamp-3 flex items-center gap-2 text-sm"
       >
         <img src={value} alt={key} class="max-h-16 max-w-96 object-contain" />
-        {value}
+        {#if isUrl}
+          {value}
+        {/if}
       </a>
     {:else if isUrl && !isImageUrl}
       <a href={value} target="_blank" rel="noopener">{value}</a>
