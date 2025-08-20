@@ -95,7 +95,7 @@
                   {key}
                 </td>
 
-                <Value value={hit[key]} />
+                <Value {key} value={hit[key]} />
               </tr>
             {/each}
           </tbody>
