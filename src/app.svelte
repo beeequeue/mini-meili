@@ -125,7 +125,7 @@
     made by beequeue
   </a>
   <span>•</span>
-  <span class="text-3.5">{import.meta.env.GIT_SHA.slice(0, 7)}</span>
+  <span class="text-3.5">{import.meta.env.GIT_SHA}</span>
 </div>
 
 <style>
