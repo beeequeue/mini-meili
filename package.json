@@ -47,7 +47,7 @@
     "@unocss/reset": "66.5.4",
     "@unocss/transformer-compile-class": "66.5.4",
     "@unocss/vite": "66.5.4",
-    "eslint": "9.39.0",
+    "eslint": "9.39.1",
     "eslint-plugin-svelte": "3.13.0",
     "nano-staged": "0.8.0",
     "prettier": "3.6.2",
